@@ -1,0 +1,36 @@
+project:
+  name: "Hyper-Realism-AI"
+  version: "1.0.0"
+
+models:
+  dev:
+    id: "black-forest-labs/FLUX.1-dev"
+    lora_repo: "strangerzonehf/Flux-Super-Realism-LoRA"
+    trigger_word: "Super Realism"
+    precision: "bfloat16"
+  krea:
+    id: "black-forest-labs/FLUX.1-Krea-dev"
+    vae: "black-forest-labs/FLUX.1-Krea-dev"
+    tiny_vae: "madebyollin/taef1"
+
+generation:
+  defaults:
+    width: 1024
+    height: 1024
+    guidance: 3.0
+    steps: 28
+    seed_max: 2147483647
+
+styles:
+  "3840 x 2160":
+    prompt: "hyper-realistic 8K image of {prompt}. ultra-detailed, lifelike, high-resolution, sharp, vibrant colors, photorealistic"
+    negative: ""
+  "2560 x 1440":
+    prompt: "hyper-realistic 4K image of {prompt}. ultra-detailed, lifelike, high-resolution, sharp, vibrant colors, photorealistic"
+    negative: ""
+  "HD+":
+    prompt: "hyper-realistic 2K image of {prompt}. ultra-detailed, lifelike, high-resolution, sharp, vibrant colors, photorealistic"
+    negative: ""
+  "Style Zero":
+    prompt: "{prompt}"
+    negative: ""
