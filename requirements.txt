@@ -1,0 +1,19 @@
+# Base Dependencies
+huggingface_hub
+pillow
+gradio
+pyyaml
+torch
+torchvision
+
+# GGUF Quantization Support
+gguf
+
+# Diffusers & Transformers (PyTorch MPS / CUDA)
+git+https://github.com/huggingface/diffusers.git
+git+https://github.com/huggingface/transformers.git
+git+https://github.com/huggingface/accelerate.git
+git+https://github.com/huggingface/peft
+sentencepiece
+hf_xet
+protobuf
